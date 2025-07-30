@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "cc": "3.0.1",
-    "jest": "25.5.4",
+    "jest": "^30.0.5",
     "prettier": "1.19.1"
   }
 }

@@ -16,7 +16,7 @@ describe('pamAuthenticatePromise', () => {
 
       const promise = pamAuthenticatePromise(options);
 
-      await expect(promise).rejects.toThrow(TypeError('Password option is required'));
+      await expect(promise).rejects.toThrow('Password option is required');
     });
 
     test('password option should ignore undefined', async () => {
@@ -27,7 +27,7 @@ describe('pamAuthenticatePromise', () => {
 
       const promise = pamAuthenticatePromise(options);
 
-      await expect(promise).rejects.toThrow(TypeError('Password option is required'));
+      await expect(promise).rejects.toThrow('Password option is required');
     });
 
     test('username option is required', async () => {
@@ -37,7 +37,7 @@ describe('pamAuthenticatePromise', () => {
 
       const promise = pamAuthenticatePromise(options);
 
-      await expect(promise).rejects.toThrow(TypeError('Username option is required'));
+      await expect(promise).rejects.toThrow('Username option is required');
     });
 
     test('username option should ignore undefined', async () => {
@@ -48,7 +48,7 @@ describe('pamAuthenticatePromise', () => {
 
       const promise = pamAuthenticatePromise(options);
 
-      await expect(promise).rejects.toThrow(TypeError('Username option is required'));
+      await expect(promise).rejects.toThrow('Username option is required');
     });
 
     test('serviceName option should ignore undefined', async () => {
@@ -96,7 +96,7 @@ describe('pamAuthenticatePromise', () => {
 
         const promise = pamAuthenticatePromise(options);
 
-        await expect(promise).rejects.toThrow(TypeError(expected));
+        await expect(promise).rejects.toThrow(expected);
       });
     });
   });

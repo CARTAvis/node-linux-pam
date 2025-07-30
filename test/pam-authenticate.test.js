@@ -16,7 +16,7 @@ describe('pamAuthenticate', () => {
 
       expect(() => {
         pamAuthenticate(options, () => {});
-      }).toThrow(TypeError('Password option is required'));
+      }).toThrow('Password option is required');
     });
 
     test('password option should ignore undefined', () => {
@@ -27,7 +27,7 @@ describe('pamAuthenticate', () => {
 
       expect(() => {
         pamAuthenticate(options, () => {});
-      }).toThrow(TypeError('Password option is required'));
+      }).toThrow('Password option is required');
     });
 
     test('username option is required', () => {
@@ -37,7 +37,7 @@ describe('pamAuthenticate', () => {
 
       expect(() => {
         pamAuthenticate(options, () => {});
-      }).toThrow(TypeError('Username option is required'));
+      }).toThrow('Username option is required');
     });
 
     test('username option should ignore undefined', () => {
@@ -48,7 +48,7 @@ describe('pamAuthenticate', () => {
 
       expect(() => {
         pamAuthenticate(options, () => {});
-      }).toThrow(TypeError('Username option is required'));
+      }).toThrow('Username option is required');
     });
 
     test('serviceName option should ignore undefined', (done) => {
@@ -96,7 +96,7 @@ describe('pamAuthenticate', () => {
 
         expect(() => {
           pamAuthenticate(options, () => {});
-        }).toThrow(TypeError(expected));
+        }).toThrow(expected);
       });
     });
   });
