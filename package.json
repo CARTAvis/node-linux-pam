@@ -12,7 +12,7 @@
     "lint:prettier": "prettier --check './**/*.{js,json,md,ts}'"
   },
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=20.0.0"
   },
   "files": [
     "src/",
