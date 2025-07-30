@@ -1,6 +1,6 @@
 {
   "name": "node-linux-pam",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "gypfile": true,
   "description": "Asynchronous PAM authentication for NodeJS",
   "main": "index.js",
@@ -27,7 +27,7 @@
   "binary": {
     "module_name": "node-linux-pam",
     "module_path": "./build/Release/",
-    "remote_path": "./aironavt/{module_name}/releases/download/{version}",
+    "remote_path": "./daikema/{module_name}/releases/download/{version}",
     "host": "https://github.com"
   },
   "cc": {
@@ -44,18 +44,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aironavt/node-linux-pam.git"
+    "url": "https://github.com/daikema/node-linux-pam.git"
   },
   "bugs": {
-    "url": "https://github.com/aironavt/node-linux-pam/issues"
+    "url": "https://github.com/daikema/node-linux-pam/issues"
   },
-  "homepage": "https://github.com/aironavt/node-linux-pam#readme",
+  "homepage": "https://github.com/daikema/node-linux-pam#readme",
   "keywords": [
     "pam",
     "linux-pam",
     "authentication"
   ],
-  "author": "Evgeniy Vladykin <aironavt@gmail.com>",
+  "author": "David Aikema <david@idia.ac.za>",
   "license": "MIT",
   "dependencies": {
     "@mapbox/node-pre-gyp": "1.0.5",
