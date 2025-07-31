@@ -1,0 +1,45 @@
+name: Release binary
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build-and-upload:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Setup Libpam
+        run: sudo apt-get update && sudo apt-get install libpam0g-dev
+
+      - name: Install packages
+        run: npm ci --build-from-source
+
+      - name: Build native module
+        run: |
+          ./node_modules/.bin/node-pre-gyp rebuild
+          ./node_modules/.bin/node-pre-gyp package
+
+      - name: Move packaged binary
+        run: |
+          mkdir -p dist
+          find ./build/ -name '*.tar.gz' -exec mv {} dist/ \;
+            if [ -z "$(ls -A dist)" ]; then
+              echo "No packaged binary found. Failing release upload."
+              exit 1
+            fi
+
+      - name: Upload binary to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
