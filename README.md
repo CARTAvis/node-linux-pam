@@ -1,6 +1,6 @@
 ![logo](images/node-linux-pam-logo.png)
 
-[![Actions Status](https://github.com/aironavt/node-linux-pam/actions/workflows/build.yml/badge.svg)](https://github.com/aironavt/node-linux-pam/actions)
+[![Actions Status](https://github.com/daikema/node-linux-pam/actions/workflows/build.yml/badge.svg)](https://github.com/daikema/node-linux-pam/actions)
 [![node-current](https://img.shields.io/node/v/node-linux-pam)](https://nodejs.org)
 
 Asynchronous PAM authentication for NodeJS. Implements two PAM methods [pam_authenticate(3)](http://www.linux-pam.org/Linux-PAM-html/adg-interface-by-app-expected.html#adg-pam_authenticate) и [pam_acct_mgmt(3)](http://www.linux-pam.org/Linux-PAM-html/adg-interface-by-app-expected.html#adg-pam_acct_mgmt).
@@ -79,14 +79,16 @@ Error: Authentication failure
 
 ## Requirements
 
-This module require atleast `NodeJS 8`
+This module require atleast `NodeJS 20`
 
-Note that you will have a warning about N-API in version < 10, you can disable it by adding the `--no-warnings` flag to node
-
-First you need to install the development version of PAM libraries for your distro.
+Unless using a binary release, you need to install the development version of PAM libraries for your distro.
 
 - _Centos and RHEL:_ yum install pam-devel
 - _Debian/Ubuntu:_ apt-get install libpam0g-dev
+
+If using a binary release, you'll still need the PAM libraries installed.
+
+- _Debian/Ubuntu:_ apt-get install libpam0g
 
 The user running the NodeJS process must have read permissions on the `/etc/shadow` file.
 
