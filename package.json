@@ -27,8 +27,8 @@
   "binary": {
     "module_name": "node-linux-pam",
     "module_path": "./build/Release/",
-    "remote_path": "./daikema/{module_name}/releases/download/{version}",
-    "host": "https://github.com"
+    "host": "https://github.com/daikema",
+    "remote_path": "{module_name}/releases/download/v{version}/"
   },
   "cc": {
     "linelength": "120",
