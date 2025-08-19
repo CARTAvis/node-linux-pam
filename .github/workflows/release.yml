@@ -32,6 +32,9 @@ jobs:
           ./node_modules/.bin/node-pre-gyp rebuild
           ./node_modules/.bin/node-pre-gyp package
 
+      - name: Run test suite
+        run: sudo npm test
+
       - name: Move packaged binary
         run: |
           mkdir -p dist
