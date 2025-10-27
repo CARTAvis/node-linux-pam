@@ -1,10 +1,7 @@
 name: Build
 
 on:
-  push:
-    branches: 
-      - main
-      - release/*
+  pull_request:
 
 jobs:
   build:
@@ -34,13 +31,3 @@ jobs:
       - name: Run tests
         run: sudo npm test
 
-      - name: Packing
-        run: |
-          rm -rf build/Release/.deps build/Release/obj.target
-          ./node_modules/.bin/node-pre-gyp package
-          find ./build/ -name '*.tar.gz' -exec mv {} ./build/ \;
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.node-version }}
-          path: build/*.tar.gz
