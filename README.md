@@ -1,7 +1,6 @@
 ![logo](images/node-linux-pam-logo.png)
 
-[![Actions Status](https://github.com/daikema/node-linux-pam/actions/workflows/build.yml/badge.svg)](https://github.com/daikema/node-linux-pam/actions)
-[![node-current](https://img.shields.io/node/v/node-linux-pam)](https://nodejs.org)
+[![Actions Status](https://github.com/cartavis/node-linux-pam/actions/workflows/build.yml/badge.svg)](https://github.com/cartavis/node-linux-pam/actions)
 
 Asynchronous PAM authentication for NodeJS. Implements two PAM methods [pam_authenticate(3)](http://www.linux-pam.org/Linux-PAM-html/adg-interface-by-app-expected.html#adg-pam_authenticate) и [pam_acct_mgmt(3)](http://www.linux-pam.org/Linux-PAM-html/adg-interface-by-app-expected.html#adg-pam_acct_mgmt).
 

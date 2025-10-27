@@ -27,7 +27,7 @@
   "binary": {
     "module_name": "node-linux-pam",
     "module_path": "./build/Release/",
-    "host": "https://github.com/daikema",
+    "host": "https://github.com/cartavis",
     "remote_path": "{module_name}/releases/download/v{version}/"
   },
   "cc": {
@@ -44,12 +44,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/daikema/node-linux-pam.git"
+    "url": "https://github.com/cartavis/node-linux-pam.git"
   },
   "bugs": {
-    "url": "https://github.com/daikema/node-linux-pam/issues"
+    "url": "https://github.com/cartavis/node-linux-pam/issues"
   },
-  "homepage": "https://github.com/daikema/node-linux-pam#readme",
+  "homepage": "https://github.com/cartavis/node-linux-pam#readme",
   "keywords": [
     "pam",
     "linux-pam",
